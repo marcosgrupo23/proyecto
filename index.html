@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <!-- aqui esta el menu -->
+    <div class="menu"> <!--ledamos una clase para poder usar en css con mas precisión -->
+      <ul>
+        <li><a href="#">login</a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <!-- termina el menu -->
+    <h2>Ejemplo Formulario</h2>
+  </header>
+    
+<section >
+  <div class="n1">
+    <form action="">
+      <input type="hidden" value="23456">
+      <fieldset> <!-- es el contenedor que nos marca el borde y nos deja meter un texto entre sus borde --> 
+        <legend>Primera parte </legend> <!-- legend es quien nos deja meter el texto entre el borde -->
+        <br>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- label es para escribir y es un elemento en linea al contrario que los h1. El for atributo asocia la etiqueta con un elemento de control -->
+        <label for="nombre">Nombre
+          <input id="nombre" value="Carlos" maxlength="20" placeholder="Escribe tu nombre" type="text" >
+          <!-- input ponemos el tipo que ahora es para escribir un texto, el id que es el elemento control el cual vamos a asociar con el for de
+        el label este label tiene que actuar como etiqueta para el input y asi poner el control que cuando se de click sobre el texto escrito
+        en el label paresca el cursor sobre el input de texto. MAXLENGTH es para limitar el numero de caracteres que puedo escribir en el
+        input. PLACEHOLDER es para mostrar un texto guia que le indique al usuario que va a escribir. VALUE es el valor que quiero que aparesca 
+        por defecto. READONLY es un atributo sin valor y es para no dejar escribir en el input para dar una idea esto se usa para traer datos 
+        como el nomre desde la base de datos y ponerlos hay y no dejar que se modifique. DISABLED atributo sin valor sirve para inabilitar el
+        input -->
+        </label>
+        <br><br>
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- construir el label edad y dentro de el label ponemos el INPUT de tipo RANGE el cual es un control deslizable -->
+        <label for="edad">Edad
+          <input id="edad" type="range" min="18" max="28" step="1">
+          <!-- ponemos el id y sabemos que debe llamarse como el for de el label para poder relacionarlos ponemos el tipo que es RANGE le 
+            agregamos los atributos MIN que es para poner el minimo del rango y ponemos el MAX que es para poner el maximo del rango y ponemos un
+            STEP para poner de cuanto en cuanto se va a escalar aunque aqui no nos muestra ningun valor pero lo usaremos con java scrip -->
+        </label>
+        <br>
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- creamos el label con su for y contendra un input que tendra el id que se llamara igual que el for y sera tipo NUMBER para ir
+             aumentando o disminuyendo con las flechitas de control -->
+        <label for="tiempo_en_la_empresa">
+          Salario
+          <input id="tiempo_en_la_empresa" type="number"  min="100" max="500" step="20" value="100">
+          <!-- el ID el tipo NUMBER este es usado herroneamente muchas veces porque el no es para poner telefonos o cedulas,
+             vamos a calcular un salario ponemos el MIN el minimo, el MAX el maximo, STEP para la escala de cuanto en cuanto
+            y el valor para fijar el valor que aparece de inicio en el input vamos a poner por defecto el mismo MIN -->
+        </label>
+        <br><br>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- creamos el label como contenedor de el input que es tipo PASSWORD para ingresar contraseñas -->
+        <label for="clave">
+          Ingrese la clave
+          <input id="clave" type="password" required>
+        </label>
+        <br><br>
+        <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- date para la fecha es un picker que es para seleccionar, lo mismo label de contenedor el tipo que es DATE  el MIN y el MAX
+             con el formato que se indica -->
+        <label for="fecha"> 
+          Ingrese una fecha
+          <input id="fecha" type="date" min="2021-08-29" value="2021-08-29" max="2021-09-01">
+        </label>
+        <br><br>
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- color ES un picker que es para seleccionar, igual el label como contenedor y el tipo que es COLOR  -->
+        <label for="campo_color">
+          Seleccione un color
+          <input id="campo_color" type="color" value="#636609">
+        </label>
+        <br><br>
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ES un picker que es para seleccionar, este es para cargar un archivo, el tipo es FILE atributo multiple es para seleccionar varios
+        archivos y montarlos -->
+        <label for="archivo">
+          Busque un archivo
+          <input id="archivo" type="file" multiple>
+        </label>
+        <br><br>
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- muy parecido al password nos da una ventaja almomento de verlos en movil porque nos da opciones del @ y el .com -->
+        <label for="correo">
+          Correo 
+          <input type="email">
+        </label>
+      </fieldset>
+      <input type="button" value="Enviar">
+      <input type="reset" value="Borrar formulario">
+    </form>
+</div>
+<br>
+  
+  <div class="n1">
+    <fieldset>  <!-- contenedor con borde -->
+      <legend>Parte dos</legend> <!-- pone texto den el borde -->
+
+      <!-- creamos un select para poder desplegar varias opciones y assi escoger una ciudad, el atributo name sabemos que lo utilizaremos en
+         css. luego vemos las distintas opciones las cuales tienen un atributo principal y es el value y este contine el dato que va a entregar
+        el elemento seleccionado -->
+      <h2>SELECT</h2>
+      <select >
+        <option value="1">Medellin</option>
+        <option value="2">Bogota</option>
+        <option value="3">Cali</option>
+      </select> <br>
+      <br>
+
+      <h2>RADIO BUTTON</h2>
+      <label for="">
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        
+        <!-- los radio button -->
+        <!-- estos son los  que seleccionamos con unica respuesta puedan que sean varios pero podemos seleccionar solo uno, estos son muy
+           utilizados en las encuestas o evaluaciones de respuestas unicas, para agrupar varios radios tenemos que darles el mismo nombre-->
+        <input type="radio" name="radio" />
+        Casado
+      </label><br><br>
+      <label for="">
+        <input type="radio" name="radio"  checked />
+        Soltero
+      </label><br><br>
+      <label for="">
+        <input type="radio" name="radio" />
+        Viudo
+      </label><br><br>
+      <label for="">
+        <input type="radio" name="radio" />
+        Divorciado
+      </label>
+      <br><br>
+
+      <H2>CHECKBOX</H2>
+      <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+      <!-- los checkbox son utilizados en preguntas con multiples repuestas -->
+      <label for="">
+        <input type="checkbox" >
+        Dibujar
+      </label>
+      <br><br>
+      <label for="">
+        <input type="checkbox" >
+        Dibujar
+      </label>
+      <br><br>
+      <label for="">
+        <input type="checkbox" >
+        Cantar
+      </label>
+      <br><br>
+      <label for="">
+        <input type="checkbox" >
+        Trotar
+      </label>
+      <br><br>
+      <label for="">
+        <input type="checkbox" checked>
+        Nadar
+      </label><br><br>
+
+      <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+      <!-- texarea son utilizados para dar una opcion al ususario de escribir un texto mas largo dependiendo de lo crea o amerite
+         conveniente el programador -->
+      <h2>TEXTAREA</h2>
+      <textarea name="" id="" cols="20" rows="5"></textarea>
+      <br><br>
+
+      <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+      <!-- datalist  es una de las formas como podemos ayudar al usuario a completar palabras en un input de tipo text, las listas
+         siempre tienen que llevar el atributo value es sus opcion ps este es el contenido real de sta -->
+        <H2>LISTAS</H2>
+         <label for="">Ciudad
+        <input type="text" name="ciudad" list="lista_ciudades">
+        <datalist id="lista_ciudades">
+          <option value="Medellin ant">Medellin</option>
+          <option value="Magdalena">Magdalena</option>
+          <option value="Monteria">Monteria</option>
+          <option value="Santa Fe de Bogota">Bogota</option>
+          <option value="">Cali</option>
+        </datalist>
+        </label>
+    </fieldset>
+</div>
+<br>
+<nav class="n1"></nav>
+</section>
+</body>
+</html>

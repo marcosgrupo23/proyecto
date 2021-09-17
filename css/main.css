@@ -1,0 +1,51 @@
+body{ /*le damos algunos estilos al body */
+    font-family: Arial, Helvetica, sans-serif; /*estilo al texto */
+    background: #e8e8e8; /*color de fondo al body*/
+}
+
+/* estilo a ul */
+.menu ul{ /* estoy invocando los elementos ul que se encuentran dentro de los elementos con clase menu*/ 
+    list-style: none; /*le quito los estilos que traen por defecto las listas desordenadas*/
+    padding: 0%; /*dejamos el relleno en 0*/
+    background: #190150; /*le damos un color al fondo*/
+    width: 90%; /*le damos un ancho */
+    margin: auto; /*con esta propiedad centramos el elemento*/
+}
+
+.menu li a{ /* invocamos todos los componentes a que estan dentro del li que esta dentro del ul que estan 
+            dentro del div que tiene la clase menu. Aunque no colocamos el (ul) para llegar al elemento (a)
+            css entiende la ruta, pero si no colacamos el elemento (li) no va a tomar los estilos que
+             le estamos dando*/
+    text-decoration: none; /*quitamos las propiedades a la etiqueta (a) que crea es la que crea los enlaces*/
+    color: white;
+    padding: 20px;
+    display: block; /* tema atratar que son los display y como se usan */
+}
+
+
+.menu ul li{ /*le doy estilos a los (li) dentro del (ul) que esta dentro del div con la clase menu*/
+    display: inline-block; /*este le da el estilo horizontal a la lista */
+    text-align: center; /*centra el texto dentro del li */
+}
+
+.menu li a:hover{ /*cambia el color al pasar el cursor del mouse por encima. la palabra clave es hover*/
+    background: #ef8354; /*le doy el color el cual va a cambiar*/
+}
+/* ul{
+    display: flex;
+} */
+
+nav{
+    width: 100px;
+    height: 100px;
+}
+
+#dos{
+    width: 50%;
+    background-color: rgb(189, 107, 107);
+       
+}
+#uno{
+    width: 20%;
+}
+
